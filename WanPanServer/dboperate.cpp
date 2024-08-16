@@ -22,9 +22,9 @@ DBOperate::~DBOperate()
 void DBOperate::init()
 {
     m_db.setHostName("localhost");         // 数据库服务器IP
-    m_db.setUserName("root");              // 数据库用户名
-    m_db.setPassword("6412358");              // 数据库密码
-    m_db.setDatabaseName("wanpan"); // 数据库名
+    m_db.setUserName("  ");              // 数据库用户名
+    m_db.setPassword("  ");              // 数据库密码
+    m_db.setDatabaseName("   "); // 数据库名
     if(m_db.open()) // 数据库是否打开成功
     {
         QSqlQuery query;
@@ -32,7 +32,7 @@ void DBOperate::init()
         while(query.next())
         {
             QString data = QString("%1, %2, %3, %4").arg(query.value(0).toString()).arg(query.value(1).toString())
-                               .arg(query.value(2).toString()).arg(query.value(3).toString());
+                               。arg(query.value(2).toString()).arg(query.value(3).toString());
             qDebug() << data;
         }
     }
